@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { generateBG } from "../utils/bgAnim.js";
 import { Helmet } from "react-helmet";
-import pdf from "../assets/mehedi-hassan-cv.pdf";
+import pdf from "../assets/Karthik Nishanth-Resume.pdf";
 
 export default class ContactScreen extends Component {
   componentWillMount() {
@@ -103,23 +103,16 @@ export default class ContactScreen extends Component {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://github.com/MehediH"
+                  href="https://github.com/karthiknish"
                 >
                   GitHub
                 </a>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.linkedin.com/in/meh-hassan/"
+                  href="https://www.linkedin.com/in/karthik-nishanth/"
                 >
                   LinkedIn
-                </a>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.instagram.com/builtbymeh/"
-                >
-                  Instagram
                 </a>
               </div>
             </div>

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { generateBG } from "../utils/bgAnim.js";
 import { Helmet } from "react-helmet";
-import pdf from "../assets/mehedi-hassan-cv.pdf";
 
 export default class ContactScreen extends Component {
   componentWillMount() {
@@ -72,6 +71,7 @@ export default class ContactScreen extends Component {
           >
             <div className="meta projectgroup">
               <a
+                rel="noopener noreferrer"
                 href="https://github.com/karthiknish/youmusic-react"
                 target="_blank"
               >
@@ -93,6 +93,7 @@ export default class ContactScreen extends Component {
                 </p>
               </a>
               <a
+                rel="noopener noreferrer"
                 href="https://github.com/karthiknish/netflix-clone"
                 target="_blank"
               >
@@ -117,6 +118,7 @@ export default class ContactScreen extends Component {
 
             <div className="meta projectgroup">
               <a
+                rel="noopener noreferrer"
                 href="https://github.com/karthiknish/amazon-clone-react"
                 target="_blank"
               >
@@ -138,6 +140,7 @@ export default class ContactScreen extends Component {
                 </p>
               </a>
               <a
+                rel="noopener noreferrer"
                 href="https://github.com/karthiknish/game-directory-react"
                 target="_blank"
               >
