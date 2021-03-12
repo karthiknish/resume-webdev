@@ -1,0 +1,930 @@
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #11171a;
+  border-radius: 10px;
+}
+
+.no-bg {
+  header h1 {
+    animation: none !important;
+    display: block;
+    opacity: 1;
+
+    a {
+      animation: none !important;
+    }
+  }
+
+  header div span {
+    animation: pickupthephonebaby 1s 0.2s forwards
+      cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .main.site-cont {
+    animation: boasy 1s 0.1s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+
+    .hero {
+      animation: boasy 1s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+      .services {
+        animation: stargazing 1s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+    }
+
+    .children {
+      .socials a {
+        animation: lovestolay 1s 0.25s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .socials :nth-child(2n) {
+        animation-delay: 0.3s !important;
+      }
+
+      .projects {
+        animation: boasy 1s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .contact {
+        animation: boasy 1s 0.45s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+    }
+  }
+
+  .projects.site-cont {
+    animation: stargazing 1.5s 0.1s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+
+    article .container {
+      background-color: #1d1b1b;
+
+      img {
+        opacity: 1 !important;
+      }
+
+      opacity: 0;
+      animation: hope 1s 0.12s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    }
+  }
+
+  .single-project {
+    animation: stargazing 1s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .page-about.site-cont {
+    .animated {
+      li:nth-child(1) {
+        animation-delay: 0.5s !important;
+
+        .loader {
+          animation-delay: 1.5s !important;
+        }
+
+        .text {
+          animation-delay: 1.5s !important;
+        }
+      }
+
+      @for $i from 2 through 12 {
+        li:nth-child(#{$i}n) {
+          animation-delay: $i * 1.3s !important;
+
+          .loader {
+            animation-delay: $i * 1.3 + 1s !important;
+          }
+
+          .text {
+            animation-delay: $i * 1.3 + 1s !important;
+          }
+        }
+      }
+    }
+  }
+
+  .background-overlay {
+    animation: none;
+    opacity: 0.3;
+
+    span {
+      animation: none;
+      transform: rotate(45deg);
+      opacity: 1;
+    }
+  }
+}
+
+html {
+  font-family: "Roboto Mono", monospace;
+  text-rendering: optimizeLegibility;
+  padding: 0px;
+  // color: #fff;
+
+  body {
+    margin: 0px;
+    background-color: #000;
+    overflow-x: hidden;
+
+    .content {
+      position: relative;
+      overflow: hidden;
+    }
+    .prog {
+      display: flex;
+      flex-direction: row;
+    }
+    .projectgroup {
+      display: grid;
+      animation: boasy 1s 0.1s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+      margin: 20px;
+      grid-gap: 20px;
+      grid-auto-flow: column;
+      // flex-wrap: wrap;
+    }
+
+    .wrapper {
+      z-index: 99999;
+      display: block;
+      width: 100%;
+      padding: 50px 0 0 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      padding-left: 100px;
+
+      h1 {
+        font-size: 50px;
+        margin: 0px;
+        animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        background: linear-gradient(to right, #d82881 36%, #8d27da 100%);
+        transition: 0.3s all ease-in-out;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        color: transparent;
+      }
+
+      span {
+        width: 0%;
+        background-color: #d82881;
+        height: 3px;
+        display: block;
+      }
+
+      a {
+        transition: 0.1s all ease-in-out;
+        text-decoration: none;
+
+        &:hover {
+          span {
+            animation: benz 1s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          }
+        }
+      }
+
+      div {
+        position: relative;
+        margin-left: 15px;
+
+        span {
+          opacity: 0;
+          position: absolute;
+          bottom: 15px;
+          width: 0%;
+          height: 5px;
+          background-color: #1536ba;
+          border-radius: 50px 0 0 0;
+          right: 0;
+          animation: pickupthephonebaby 2s 1.4s forwards
+            cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .alt {
+          bottom: 30px;
+          background-color: #b91c6c;
+        }
+      }
+    }
+
+    .site-cont {
+      padding: 50px 100px;
+    }
+
+    .socials {
+      display: grid;
+      height: 60px;
+      margin-bottom: 50px !important;
+      grid-auto-flow: column;
+      grid-gap: 10px;
+      text-align: center;
+      line-height: 60px;
+      margin-top: 20px;
+      text-transform: uppercase;
+
+      a {
+        border: 5px solid transparent;
+        opacity: 0;
+        animation: lovestolay 2s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+          background-color: #2cb57c;
+        }
+      }
+    }
+
+    .main {
+      display: grid;
+      overflow: hidden;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-gap: 80px;
+
+      h1,
+      h2 {
+        margin: 0px;
+      }
+
+      .hero {
+        padding: 50px;
+        background-color: #7f5af0;
+        border: 10px solid #e7ff0e;
+        opacity: 0;
+        color: #2cb57c;
+        animation: boasy 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        box-shadow: 0px 0px 0px 0px transparent;
+
+        h1 {
+          padding-bottom: 20px;
+          font-size: 2.5em;
+          color: #e7ff0e;
+        }
+
+        .hi {
+          font-size: 2.7em;
+          color: #f1f1f1;
+        }
+
+        h2 {
+          font-size: 2em;
+          font-family: "Inconsolata", monospace;
+          font-weight: 400;
+          color: #fff;
+          line-height: 40px;
+        }
+
+        .services {
+          margin-top: 20px;
+          font-size: 30px;
+          text-decoration: none;
+          color: #e7ff0e;
+          opacity: 0;
+          animation: stargazing 2.5s 1.5s forwards
+            cubic-bezier(0.2, 0.8, 0.2, 1);
+          border-bottom: 3px solid #def919;
+          display: inline-block;
+        }
+      }
+
+      .children {
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+
+        h2 {
+          font-weight: 300;
+          font-family: "Inconsolata", monospace;
+        }
+
+        .projects {
+          padding: 50px;
+          background-color: #ef4565;
+          opacity: 0;
+          margin-bottom: 100px;
+          color: #7f5af0;
+          animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          transition: 0.3s all ease-in-out;
+          box-shadow: 0px 0px 0px 0px transparent;
+          display: block;
+
+          h2 {
+            color: white;
+          }
+
+          &:hover {
+            background-color: #2cb57c;
+          }
+        }
+
+        .contact {
+          padding: 50px;
+          background-color: #c53651;
+
+          opacity: 0;
+          color: #7f5af0;
+          animation: boasy 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+          transition: 0.3s all ease-in-out;
+          box-shadow: 0px 0px 0px 0px transparent;
+
+          h2 {
+            color: #e3eeff;
+          }
+
+          &:hover {
+            background-color: #2cb57c;
+          }
+        }
+
+        .socials {
+          @for $i from 2 through 3 {
+            :nth-child(#{$i}n) {
+              animation-delay: 1.9 + $i * 0.2s !important;
+            }
+          }
+        }
+      }
+
+      .card {
+        .arrow {
+          transition: 0.3s all cubic-bezier(1, -0.22, 0.49, 1.49);
+        }
+
+        &:hover {
+          .arrow {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .background-overlay {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: -9999;
+      top: 0;
+      left: 0;
+      display: grid;
+      margin: 0px;
+      overflow: hidden;
+      grid-gap: 0;
+      opacity: 1;
+
+      span {
+        border: 2px solid #ff00e0;
+        box-shadow: 0px 3px 35px rgb(37, 4, 223);
+        height: 100%;
+        opacity: 0;
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .square-anim span {
+      animation: chanel 2s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1),
+        ultravio 2s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1),
+        sweetsweet 3s 0.1s forwards cubic-bezier(1, -0.22, 0.65, 0.73);
+    }
+
+    .sn-anim span {
+      transform: rotate(45deg);
+      opacity: 1;
+      margin-left: 0px;
+    }
+
+    .anim {
+      animation: wasted 5s 1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .four {
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5em;
+      box-shadow: 0px 3px 200px #ff00e0;
+      z-index: 99999;
+      background-color: #fff;
+      padding: 50px 80px;
+      color: #ff00e0;
+      animation: ricky 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+      a {
+        display: block;
+        font-size: 25px;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 50px;
+        color: #218ff1;
+
+        .arrow {
+          transition: 0.3s all cubic-bezier(1, -0.22, 0.49, 1.49);
+        }
+
+        &:hover {
+          .arrow {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .projects {
+      opacity: 0;
+      animation: stargazing 3s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto;
+      grid-gap: 100px;
+
+      a {
+        color: #b5f9bb;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        outline: 0 !important;
+
+        &:focus,
+        &:active,
+        &:hover {
+          .meta {
+            opacity: 1;
+          }
+
+          .overlay {
+            opacity: 0.65 !important;
+          }
+        }
+      }
+
+      article {
+        position: relative;
+
+        .container {
+          display: block;
+          margin: 0 auto;
+          height: 50vh;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          -webkit-animation: hope 3s 1.9s forwards
+            cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: hope 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+          img {
+            display: none;
+          }
+
+          .overlay {
+            background-color: #000;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: 0.4s all ease-in-out;
+          }
+        }
+
+        .meta {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: 0.4s all ease-in-out;
+        }
+
+        h1 {
+          font-size: 5em;
+          margin: 0px;
+          color: #fff;
+          padding: 20px 50px;
+        }
+
+        img {
+          width: 100%;
+          max-width: 1300px;
+          opacity: 0;
+          margin: 0 auto;
+          display: block;
+          animation: hope 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+      }
+    }
+
+    .single-project {
+      display: block;
+      overflow: hidden;
+      max-width: 1800px;
+      margin: 0 auto;
+      opacity: 0;
+      animation: stargazing 3s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+      .allProjects {
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.7;
+        font-size: 15px;
+        transition: 0.3s all ease-in-out;
+
+        &:hover,
+        &:active,
+        &:focus {
+          opacity: 1;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .meta {
+        margin-top: 20px;
+        background-color: #191818;
+        padding: 50px;
+        font-family: "Inconsolata", monospace;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 30px;
+
+        h1 {
+          font-size: 3em;
+          margin: 0px;
+          color: #e7ff0e;
+          padding: 20px 0;
+        }
+
+        p {
+          font-size: 2em;
+          margin: 0px;
+          padding-top: 20px;
+          color: #f1f1f1;
+          font-size: 25px;
+
+          a {
+            color: #e7ff0e;
+            transition: 0.3s all ease-in-out;
+
+            &:hover {
+              opacity: 0.75;
+            }
+          }
+        }
+
+        .view {
+          color: #fff;
+          display: inline-block;
+          margin: 20px 0;
+          padding: 10px 20px;
+          background-color: #b91c6c;
+          transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
+          box-shadow: 8px 9px 0px 0px #1536ba;
+          text-decoration: none;
+
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: #860044;
+          }
+        }
+      }
+
+      .article-content {
+        font-size: 25px;
+        line-height: 34px;
+        font-family: "Inconsolata", monospace;
+        font-weight: 400;
+        margin: 20px 0;
+
+        a {
+          color: #fff;
+          transition: 0.3s all ease-in-out;
+
+          &:hover,
+          &:active,
+          &:focus {
+            opacity: 0.75;
+          }
+        }
+      }
+    }
+
+    .page-services {
+      ul {
+        list-style: none;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 0px;
+        padding: 0px;
+        animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        opacity: 0;
+
+        li {
+          padding: 50px;
+          background-color: rgba(0, 0, 0, 0.7);
+          border: 1px solid #000;
+          transition: box-shadow 0.15s ease-out, transform 0.35s ease-out,
+            opacity 0.2s ease-out;
+          animation: sunday 4s 1.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+          h2 {
+            margin-top: 0px;
+            font-size: 1.8em;
+          }
+
+          p {
+            font-family: "Inconsolata", monospace;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
+      }
+
+      .about-me {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: #ccc;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 20px;
+        font-family: "Inconsolata", monospace;
+        margin: 60px 0;
+        animation: xnxx 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        opacity: 0;
+        transition: 0.3s all ease-in-out;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: #fff;
+        }
+
+        span {
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .page-about {
+      display: block;
+      position: relative;
+
+      .stopaim li {
+        animation: chevelle 2s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+
+        .loader {
+          display: none;
+        }
+      }
+
+      .animated {
+        @for $i from 1 through 12 {
+          li:nth-child(#{$i}n) {
+            animation-delay: $i * 2s !important;
+
+            .loader {
+              animation-delay: $i * 2 + 1s !important;
+            }
+
+            .text {
+              animation-delay: $i * 2 + 1s !important;
+            }
+          }
+        }
+
+        .text {
+          visibility: hidden;
+          animation: iwishicould 3s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1),
+            BRACKETS 5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+      }
+
+      .stopaim li .text {
+        visibility: visible;
+
+        .animControl {
+          display: none;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0px;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        li {
+          display: block;
+          width: 100%;
+          overflow: hidden;
+          visibility: hidden;
+          animation: chevelle 2s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          height: 0px;
+          margin-bottom: 10px;
+          position: relative;
+          flex-shrink: 0;
+          transform: none;
+
+          p {
+            padding: 10px 20px;
+            border-radius: 25px 25px 25px 0px;
+            background-color: #7f5af0;
+            color: #fff;
+            float: left;
+            font-family: "Inconsolata", monospace;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            margin: 0px;
+          }
+
+          .text {
+            border-radius: 25px 25px 25px 25px;
+
+            .hide {
+              opacity: 1;
+              animation: diff 1.5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+            }
+
+            span {
+              position: absolute;
+              right: 0;
+              text-transform: uppercase;
+              border: 3px solid #ccc;
+              color: #ccc;
+              padding: 5px 20px;
+              top: 0;
+              border-radius: 20px;
+              opacity: 0;
+              cursor: pointer;
+              animation: lastname 4s 4s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+              transition: 0.3s all ease-in-out;
+
+              &:hover {
+                background-color: #7f5af0;
+                border: 3px solid #7f5af0;
+                color: #fff;
+              }
+            }
+          }
+
+          .item-11 {
+            border-radius: 25px 25px 25px 0px;
+            position: relative;
+            z-index: 9999;
+            padding: 0px;
+            transition: 0.3s all ease-in-out;
+            background-color: #542cce;
+
+            a {
+              text-decoration: none;
+              padding: 10px 20px;
+              display: block;
+              color: #fff;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: #7f5af0;
+            }
+          }
+
+          .loader {
+            animation: nightslikethis 0s 3s forwards
+              cubic-bezier(0.2, 0.8, 0.2, 1);
+            background-color: #7f5af0;
+            opacity: 1;
+
+            span {
+              width: 7px;
+              height: 7px;
+              margin-right: 7px;
+              border-radius: 50px;
+              opacity: 0.5;
+              background-color: #ccc;
+              display: inline-block;
+              margin-bottom: 2px;
+              animation: applepie 0.9s ease-in-out infinite;
+            }
+
+            span:nth-child(2) {
+              animation: applepie 0.9s 0.6s ease-in-out infinite;
+            }
+
+            span:nth-child(3) {
+              animation: applepie 0.9s 0.9s ease-in-out infinite;
+            }
+          }
+        }
+
+        .loaded {
+          .loader {
+            display: none;
+          }
+
+          .text {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .contact {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 100px;
+
+      .intro {
+        background-color: #191818;
+        padding: 50px;
+        opacity: 0;
+        animation: stargazing 1.5s 0.1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .socials {
+        animation: stargazing 1.5s 0.8s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        opacity: 0;
+
+        a {
+          color: #fff !important;
+          text-decoration: none;
+          animation: none;
+          opacity: 1;
+          transform: translateY(0px);
+          border: 5px solid #2cb57c;
+        }
+      }
+
+      .meta {
+        max-width: 60vw;
+
+        p {
+          margin: 0 auto;
+          display: block;
+          line-height: 35px;
+          background: linear-gradient(to right, #82b4ff 40%, #bf2dae 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 25px;
+          font-family: "Inconsolata", monospace;
+          font-weight: 700;
+        }
+
+        ul {
+          padding: 0px;
+          font-family: "Inconsolata", monospace;
+          font-weight: 400;
+          font-size: 23px;
+          line-height: 30px;
+          list-style-type: none;
+
+          @for $i from 1 through 11 {
+            :nth-child(#{$i}n) {
+              animation-delay: $i * 0.1s !important;
+            }
+          }
+
+          li {
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #7f5af0;
+            opacity: 0;
+            animation: stargazing 3s 0.3s forwards
+              cubic-bezier(0.2, 0.8, 0.2, 1);
+          }
+        }
+      }
+    }
+
+    .fof {
+      position: relative;
+      width: 100%;
+      height: 99vh;
+    }
+  }
+}
+
+@import "./_animations.scss";
+@import "./_fluid.scss";
