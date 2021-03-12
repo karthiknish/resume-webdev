@@ -1,4 +1,4 @@
-![Capture](src\assets\Capture.PNG)
+![Capture](src/assets/Capture.PNG)
 
 ## This is the website for my new portfolio. I had a very simple portfolio in the past and didn't feature much of my work or exactly what I do there.This is a full-blown PWA app based on React .
 
