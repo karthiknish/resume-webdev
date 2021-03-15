@@ -13,7 +13,22 @@
   background-color: #11171a;
   border-radius: 10px;
 }
+.view {
+  color: #fff;
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #b91c6c;
+  transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 8px 9px 0px 0px #1536ba;
+  text-decoration: none;
 
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #860044;
+  }
+}
 .no-bg {
   header h1 {
     animation: none !important;

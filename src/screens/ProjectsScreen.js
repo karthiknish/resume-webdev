@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { generateBG } from "../utils/bgAnim.js";
 import { Helmet } from "react-helmet";
+import website1 from "../assets/Xd-1-main.PNG";
+import website2 from "../assets/Xd-2-main.PNG";
+import website3 from "../assets/Xd-3-main.PNG";
+import website4 from "../assets/Xd-4-main.PNG";
 
 export default class ContactScreen extends Component {
   componentWillMount() {
@@ -69,6 +73,7 @@ export default class ContactScreen extends Component {
             }`}
             // className="site-cont"
           >
+            <h1 style={{ color: "#fff", margin: "10px" }}>Reactjs Projects</h1>
             <div className="meta projectgroup">
               <a
                 rel="noopener noreferrer"
@@ -115,7 +120,6 @@ export default class ContactScreen extends Component {
                 </p>
               </a>
             </div>
-
             <div className="meta projectgroup">
               <a
                 rel="noopener noreferrer"
@@ -161,6 +165,103 @@ export default class ContactScreen extends Component {
                   Gamestore UI
                 </p>
               </a>
+            </div>
+            <h1 style={{ color: "#fff", margin: "10px" }}>Adobe XD Projects</h1>
+            <div className="meta projectgroup">
+              <Link
+                to={{
+                  pathname: "projects/xd-1",
+                  state: { ...this.props.location.state, comeThru: true },
+                }}
+              >
+                <img
+                  className="projectimg"
+                  alt="amazondotxd"
+                  width="100%"
+                  height="300px"
+                  style={{
+                    objectFit: "cover",
+                    border: "5px solid #941414",
+                    borderWidth: "0 10px 10px 0",
+                  }}
+                  // height="50%"
+                  src={website1}
+                />
+                <p style={{ textDecoration: "none", color: "white" }}>
+                  Product Design
+                </p>
+              </Link>
+              <Link
+                to={{
+                  pathname: "projects/xd-2",
+                  state: { ...this.props.location.state, comeThru: true },
+                }}
+              >
+                <img
+                  className="projectimg"
+                  alt="IndonesiaXd"
+                  width="100%"
+                  height="300px"
+                  style={{
+                    objectFit: "cover",
+                    border: "5px solid #FFA500",
+                    borderWidth: "0 10px 10px 0",
+                  }}
+                  // height="50%"
+                  src={website2}
+                />
+                <p style={{ textDecoration: "none", color: "white" }}>
+                  Travel Website
+                </p>
+              </Link>
+            </div>
+            <div className="meta projectgroup">
+              <Link
+                to={{
+                  pathname: "projects/xd-3",
+                  state: { ...this.props.location.state, comeThru: true },
+                }}
+              >
+                <img
+                  className="projectimg"
+                  alt="EcommerceXd"
+                  width="100%"
+                  height="300px"
+                  style={{
+                    objectFit: "cover",
+                    border: "5px solid #808000",
+                    borderWidth: "0 10px 10px 0",
+                  }}
+                  // height="50%"
+                  src={website3}
+                />
+                <p style={{ textDecoration: "none", color: "white" }}>
+                  Ecommerce Website
+                </p>
+              </Link>
+              <Link
+                to={{
+                  pathname: "projects/xd-4",
+                  state: { ...this.props.location.state, comeThru: true },
+                }}
+              >
+                <img
+                  className="projectimg"
+                  alt="FoodXd"
+                  width="100%"
+                  height="300px"
+                  style={{
+                    objectFit: "cover",
+                    border: "5px solid #ADD8E6",
+                    borderWidth: "0 10px 10px 0",
+                  }}
+                  // height="50%"
+                  src={website4}
+                />
+                <p style={{ textDecoration: "none", color: "white" }}>
+                  Food Delivery Website
+                </p>
+              </Link>
             </div>
           </div>
 
