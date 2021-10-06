@@ -40,7 +40,7 @@ export default class HomeScreen extends Component {
           <title>karthik nishanth.</title>
           <meta
             name="description"
-            content="A creative designer and developer based in Bangalore."
+            content="A creative designer and developer based in Liverpool."
           />
         </Helmet>
 
@@ -77,17 +77,27 @@ export default class HomeScreen extends Component {
               </h2>
               <Link
                 to={{
-                  pathname: "/contact",
+                  pathname: "/about",
                   state: { ...this.props.location.state, comeThru: true },
                 }}
                 className="services card"
               >
                 more about me <span className="arrow">&rarr;</span>
               </Link>
+              <br />
+              <Link
+                to={{
+                  pathname: "/contact",
+                  state: { ...this.props.location.state, comeThru: true },
+                }}
+                className="services card"
+              >
+                contact <span className="arrow">&rarr;</span>
+              </Link>
             </div>
 
             <div className="children">
-              <div class="socials">
+              <div className="socials">
                 <a
                   target="_blank"
                   rel="noopener noreferrer"

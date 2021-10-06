@@ -56,7 +56,7 @@ export default class ContactScreen extends Component {
       <React.Fragment>
         <div className="wrapper no-bg">
           <Helmet>
-            <title>contact // karthik nishanth.</title>
+            <title>skills // karthik nishanth.</title>
             <meta
               name="description"
               content="A creative designer and developer based in London."

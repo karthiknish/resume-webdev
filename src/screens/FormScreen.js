@@ -4,7 +4,20 @@ import { generateBG } from "../utils/bgAnim.js";
 import { Helmet } from "react-helmet";
 import pdf from "../assets/Karthik Nishanth-Resume.pdf";
 
-export default class ContactScreen extends Component {
+export default class FormScreen extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: "",
+      email: "",
+      message: "",
+      // animationEnd:
+      //   this.props.location.state.animationEnd !== undefined
+      //     ? this.props.location.state.animationEnd
+      //     : false,
+    };
+  }
   componentWillMount() {
     var width = window.innerWidth;
     var height = window.innerHeight;
@@ -39,7 +52,7 @@ export default class ContactScreen extends Component {
       <React.Fragment>
         <div className="wrapper no-bg">
           <Helmet>
-            <title>contact // karthik nishanth.</title>
+            <title>form // karthik nishanth.</title>
             <meta
               name="description"
               content="A creative designer and developer based in Liverpool."
@@ -65,7 +78,7 @@ export default class ContactScreen extends Component {
           <div className="contact site-cont">
             <div className="meta">
               <div className="intro">
-                <p>
+                {/* <p>
                   Hey! I am production graduate who loves learning new tech, and
                   building pretty things — mostly software. I am an individual
                   with great problem-solving and team-working skills. And in my
@@ -73,7 +86,27 @@ export default class ContactScreen extends Component {
                   make products that not only help my own workflow, but
                   thousands of other developers. Here are a couple of
                   accomplishments.
-                </p>
+                </p> */}
+                <h1 style={{ color: "white" }}>Contact</h1>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "20px",
+                  }}
+                >
+                  <input
+                    value={this.state.name}
+                    type="text"
+                    placeholder="Name"
+                  />
+                  <input
+                    value={this.state.email}
+                    type="email"
+                    placeholder="Email"
+                  />
+                  <textarea value={this.state.message} placeholder="Message" />
+                </div>
               </div>
               <ul>
                 {/* <li>Achieved 86% in the first year of Computer Science BSc</li> */}

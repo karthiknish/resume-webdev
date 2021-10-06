@@ -12,7 +12,7 @@ export default class ServicesSccreen extends Component {
       gridSizeY: 0,
       messages: [
         "Hey! I'm Karthik Nishanth!",
-        "I live in Coimbatore, freelancing and currently looking for work in web dev and design 🤓",
+        "I live in Liverpool, freelancing and currently looking for work in web/app dev and design 🤓",
         "I love solving problems that tackle real-life challenges and design solutions that work effortlessly ⚡",
         "So far, my biggest project is YouMusic,using youtube API to create a music player with search and recommendation features 🐣",
         "As a designer, creating beautiful, accessible, and intuitive interfaces is my priority 🙌",
@@ -29,10 +29,10 @@ export default class ServicesSccreen extends Component {
         this.props.location.state && this.props.location.state.animationEnd
           ? "stopaim"
           : "animated",
-      animationEnd:
-        this.props.location.state.animationEnd !== undefined
-          ? this.props.location.state.animationEnd
-          : false,
+      // animationEnd:
+      //   this.props.location.state.animationEnd !== undefined
+      //     ? this.props.location.state.animationEnd
+      //     : false,
     };
 
     this.aboutRef = React.createRef();

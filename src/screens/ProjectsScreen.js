@@ -6,6 +6,8 @@ import website1 from "../assets/Xd-1-main.PNG";
 import website2 from "../assets/Xd-2-main.PNG";
 import website3 from "../assets/Xd-3-main.PNG";
 import website4 from "../assets/Xd-4-main.PNG";
+import website5 from "../assets/6.jpg";
+import website6 from "../assets/Ecomm-1.PNG";
 
 export default class ContactScreen extends Component {
   componentWillMount() {
@@ -165,6 +167,30 @@ export default class ContactScreen extends Component {
                   Gamestore UI
                 </p>
               </a>
+            </div>{" "}
+            <div
+              style={{ display: "flex", flexDirection: "column" }}
+              className="meta projectgroup"
+            >
+              <Link to="/projects/ecommerce">
+                <img
+                  className="projectimg"
+                  alt="amazon"
+                  width="100%"
+                  height="300px"
+                  style={{
+                    objectFit: "cover",
+                    border: "5px solid 	#00FFFF",
+                    borderWidth: "0 10px 10px 0",
+                    width: "50%",
+                  }}
+                  // height="50%"
+                  src={website6}
+                />
+                <p style={{ textDecoration: "none", color: "white" }}>
+                  Ecommerce
+                </p>
+              </Link>
             </div>
             <h1 style={{ color: "#fff", margin: "10px" }}>Adobe XD Projects</h1>
             <div className="meta projectgroup">
@@ -260,6 +286,32 @@ export default class ContactScreen extends Component {
                 />
                 <p style={{ textDecoration: "none", color: "white" }}>
                   Food Delivery Website
+                </p>
+              </Link>
+            </div>{" "}
+            <div style={{ width: "50%" }} className="meta projectgroup">
+              {" "}
+              <Link
+                to={{
+                  pathname: "projects/kofluence",
+                  state: { ...this.props.location.state, comeThru: true },
+                }}
+              >
+                <img
+                  className="projectimg"
+                  alt="FoodXd"
+                  width="100%"
+                  height="300px"
+                  style={{
+                    objectFit: "cover",
+                    border: "5px solid #ADD8E6",
+                    borderWidth: "0 10px 10px 0",
+                  }}
+                  // height="50%"
+                  src={website5}
+                />
+                <p style={{ textDecoration: "none", color: "white" }}>
+                  Kofluence Notification
                 </p>
               </Link>
             </div>
