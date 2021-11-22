@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { generateBG } from "../utils/bgAnim.js";
 import { Helmet } from "react-helmet";
-import pdf from "../assets/Karthik Nishanth-Resume.pdf";
+import pdf from "../assets/Karthik Nishanth Saravanamuthu Resume.pdf";
 
 export default class ContactScreen extends Component {
   componentWillMount() {
