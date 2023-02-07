@@ -70,7 +70,9 @@ export default class HomeScreen extends Component {
           <div className="main site-cont">
             <div className="hero">
               <h1 className="hi">hi! i'm karthik.</h1>
-              <h1>a production undergrad,freelance webdev and designer.</h1>
+              <h1>
+                a business analyst graduate,freelance webdev and designer.
+              </h1>
               <h2>
                 i am passionate about building cutting-edge and elegant products
                 designed to solve problems.

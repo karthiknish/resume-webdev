@@ -185,6 +185,7 @@ html {
         background: linear-gradient(to right, #d82881 36%, #8d27da 100%);
         transition: 0.3s all ease-in-out;
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0;
         color: transparent;
@@ -901,6 +902,7 @@ html {
           line-height: 35px;
           background: linear-gradient(to right, #82b4ff 40%, #bf2dae 100%);
           -webkit-background-clip: text;
+          background-clip: text;
           -webkit-text-fill-color: transparent;
           font-size: 25px;
           font-family: "Inconsolata", monospace;

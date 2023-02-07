@@ -19,7 +19,7 @@ export default class ServicesSccreen extends Component {
         "I have experience working with the leading tech and programming languages. ",
         "Oh and, I love working on open-source software.",
         "I am incredibly passionate about using UI/UX tools to help build efficient, fast, and effortless websites 👨‍👩‍👦‍👦",
-        "Currently, I am looking for a tech-related product or software engineering jobs for 2021 🤟🏼",
+        "Currently, I am looking for a tech-related product or software engineering jobs for 2023 🤟🏼",
         "I am always looking forward to learning new things.",
         "Plus, I've got a keen eye for details, and a lot of experience that could be a perfect fit for your company 🤙🏼",
         "let's work together! 👀",
